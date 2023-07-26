@@ -1,5 +1,6 @@
 
 # Library-Management-System
+                                                 PROJECT CREATED USING Flask and MySQL database
 PLEASE NOTE: Password for mysql database is "password" as specified in the code
 Please change your system date before returning the book to view the implementation of fine.Fine is charged if a book is not returned within 7 days.
 ![image](https://github.com/SundarakrishnanN/Library-Management-System/assets/72200790/c584d4fe-4e83-4c31-a2f3-1a866dab4997)
