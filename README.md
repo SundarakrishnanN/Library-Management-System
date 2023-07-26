@@ -4,3 +4,5 @@ PLEASE NOTE: Password for mysql database is "password" as specified in the code
 
 This library management system implements almost all necessary features.It includes Adding books,adding users,issuing books,paying fine,etc.
 It also validates at every step to make sure the correct book is returned,it prevents duplication and any sort of errors and is completely fool proof.
+More screenshots would be added soon
+
