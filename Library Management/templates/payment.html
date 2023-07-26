@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Add User </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">          
+    </head>
+    <body></br></br></br></br></br>
+        
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+                <b>Enter Details</b>
+             </div></br></br></br>
+            <h2 class="word">
+                <form method="post" id="myForm">
+                  
+                 
+                    Fine Amount:{{fine}}
+                    
+                    
+                    <input type="submit" class="btn" value="Click to confirm payment" id="{{email}}"></br></br>
+                </form>
+            </h2>
+            
+          </div>
+          <script>
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                // Get the ID of the clicked button and store it in a hidden input field
+                var clickedButtonId = event.submitter.id;
+                var hiddenInput = document.createElement("input");
+                hiddenInput.type = "hidden";
+                hiddenInput.name = "clicked_button_id";
+                hiddenInput.value = clickedButtonId;
+                this.appendChild(hiddenInput);
+            });
+        </script>
+        </div>
+    </body>
+</html>

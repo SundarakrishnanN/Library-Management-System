@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Issue List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .bttn  {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+     
+} 
+    </style>
+</head>
+<body>
+    <a href="/"><button class="bttn" >Home</button></a>
+    <center><h1>List of Issues</h1></center>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Book Name</th>
+            <th>Email</th>
+            <th>Pending</th>
+            <th>Borrow Date</th>
+            <th>Return Date</th>
+            <th>Fine Amount</th>
+         
+        </tr>
+        {% for row in issues %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.email }}</td>
+            <td>{{ row.pending}}</td>
+            <td>{{ row.borrowDate }}</td>
+            <td>{{ row.returnDate }}</td>
+            <td>{{ row.fine }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

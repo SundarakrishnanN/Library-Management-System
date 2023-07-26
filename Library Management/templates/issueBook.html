@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Add User </title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">          
+    </head>
+    <body>
+      <a href="/"><button class="bttn" >Home</button></a>
+        <div align="center">
+          <div align="center" class="border">
+             <div class="header">
+               <h1><b>Enter Details</b></h1> 
+             </div></br></br></br>
+            <h2 class="word">
+                <form method="post">
+                  <div class="msg">{{ mssg }}</div>
+                 
+                    <input id="id" name="id" type="number" placeholder="Enter Book ID" class="textbox"/></br></br>
+                    <input id="email" name="email" type="text" placeholder="Enter Email" class="textbox"/></br></br>
+                    
+                    <input type="submit" class="btn" value="Add"></br></br>
+                </form>
+            </h2>
+            
+          </div>
+        </div>
+    </body>
+</html>

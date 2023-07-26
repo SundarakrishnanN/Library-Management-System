@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%;
+            margin: 20px auto;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+        .bttn  {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+     
+} 
+    </style>
+</head>
+<body>
+    <a href="/"><button class="bttn" >Home</button></a>
+    <h1><center>List of Books</center></h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Author</th>
+            <th>Copies</th>
+            <th>Remaining Copies</th>
+         
+        </tr>
+        {% for row in books %}
+        <tr>
+            <td>{{ row.id }}</td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.author }}</td>
+            <td>{{ row.copies }}</td>
+            <td>{{ row.remainingCopies }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
